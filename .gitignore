@@ -1,0 +1,30 @@
+# IDEA
+/.idea
+*.iml
+/bin/
+
+*/out
+
+# Eclipse
+/.settings/
+*.project
+*.classpath
+*.recommenders
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# Maven
+*/target
+*dependency-reduced-pom.xml
+
+# Java
+*.class
+*.log
+*.ctxt
+hs_err_pid*
+/target
