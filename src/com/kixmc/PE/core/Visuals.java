@@ -1,5 +1,7 @@
 package com.kixmc.PE.core;
 
+import org.bukkit.Effect;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.FallingBlock;
@@ -35,6 +37,13 @@ public class Visuals {
             PrettierExplosions.get().activeBlocksCount++;
         }
 
+    }
+
+    // currently the only extra visual
+    public static void createBlockLandEffect(Location l, Block b) {
+        // makes block break looking particles of the inputted blocks material
+        l.getWorld().playEffect(l, Effect.STEP_SOUND,
+                b.getLocation().subtract(0, 1, 0).getBlock().getType());
     }
 
 }
