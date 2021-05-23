@@ -1,7 +1,7 @@
 package com.kixmc.PE.listeners;
 
 import com.kixmc.PE.core.PrettierExplosions;
-import org.bukkit.Effect;
+import com.kixmc.PE.core.Visuals;
 import org.bukkit.entity.FallingBlock;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -25,8 +25,7 @@ public class EntityChangeBlock implements Listener {
 
         if (PrettierExplosions.get().extraVisuals) {
             // give the block landing particles so it doesn't just vanish into thin air
-            e.getEntity().getWorld().playEffect(e.getEntity().getLocation(), Effect.STEP_SOUND,
-                    e.getBlock().getLocation().subtract(0, 1, 0).getBlock().getType());
+            Visuals.createBlockLandEffect(e.getEntity().getLocation(), e.getBlock());
         }
 
     }

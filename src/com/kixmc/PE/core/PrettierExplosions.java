@@ -2,6 +2,7 @@ package com.kixmc.PE.core;
 
 import com.kixmc.PE.commands.registry.CommandRegistry;
 import com.kixmc.PE.config.ConfigFileManager;
+import com.kixmc.PE.config.ConfigListType;
 import com.kixmc.PE.config.ConfigVarLoader;
 import com.kixmc.PE.listeners.registry.ListenerRegistry;
 import org.bukkit.Bukkit;
@@ -39,7 +40,7 @@ public class PrettierExplosions extends JavaPlugin implements Listener, CommandE
 
     public boolean extraVisuals = true;
 
-    public ListType listType = ListType.WHITELIST;
+    public ConfigListType listType = ConfigListType.WHITELIST;
 
     public ArrayList<String> worldList = new ArrayList<>();
 

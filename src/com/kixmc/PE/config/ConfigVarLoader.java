@@ -1,6 +1,5 @@
 package com.kixmc.PE.config;
 
-import com.kixmc.PE.core.ListType;
 import com.kixmc.PE.core.PrettierExplosions;
 
 public class ConfigVarLoader {
@@ -16,12 +15,12 @@ public class ConfigVarLoader {
 
         PrettierExplosions.get().extraVisuals = PrettierExplosions.get().getConfig().getBoolean("extra-visuals");
 
-        PrettierExplosions.get().listType = ListType.valueOf(PrettierExplosions.get().getConfig().getString("list-type").toUpperCase());
+        PrettierExplosions.get().listType = ConfigListType.valueOf(PrettierExplosions.get().getConfig().getString("list-type").toUpperCase());
 
         PrettierExplosions.get().worldList.clear();
         PrettierExplosions.get().worldList.addAll(PrettierExplosions.get().getConfig().getStringList("world-list"));
 
-        if (PrettierExplosions.get().worldList.isEmpty()) PrettierExplosions.get().listType = ListType.NONE;
+        if (PrettierExplosions.get().worldList.isEmpty()) PrettierExplosions.get().listType = ConfigListType.NONE;
 
     }
 
