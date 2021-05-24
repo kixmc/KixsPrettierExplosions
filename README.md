@@ -41,7 +41,7 @@ world-list:
 ```
 
 ## Download
-[Spigot link coming soon]
+https://www.spigotmc.org/resources/92653/
 
 ## Compile
 Requires Java 8 & Maven
