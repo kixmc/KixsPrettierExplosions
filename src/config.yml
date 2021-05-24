@@ -3,7 +3,7 @@
 # Made with <3 by kixmc
 #
 # Some notes about the config:
-# - Be mindful adjusting the visual cap, values above 100 can really lag some players on lower end pcs. High values above 1000 may take a toll on server performance as well, depending on your rig
+# - Be mindful adjusting the visual cap, high values can really lag some players on lower end pcs. Values above 1000 may take a toll on server performance, depending on your rig
 # - extra-visuals adds some additional visuals to explosions. Consider turning the option off when using increased visual caps to lessen fps lag
 # - Valid list-types are "whitelist" or "blacklist"
 # - Set the world list to "world-list: []" to have an empty list. Empty list = prettier explosions everywhere
@@ -14,7 +14,7 @@ prettify:
   creeper-explosions: true
   other-explosions: true
 
-visual-cap-in-blocks: 85
+visual-cap-in-blocks: 185
 
 extra-visuals: true
 
