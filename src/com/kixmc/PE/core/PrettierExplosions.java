@@ -36,9 +36,10 @@ public class PrettierExplosions extends JavaPlugin implements Listener, CommandE
     public boolean executeOnCreepers = false;
     public boolean executeOnOther = false;
 
-    public int visualCap = 150;
-
     public boolean extraVisuals = true;
+    public boolean realisticTrajectories = true;
+
+    public int visualCap = 150;
 
     public ConfigListType listType = ConfigListType.WHITELIST;
 

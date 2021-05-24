@@ -11,9 +11,11 @@ public class ConfigVarLoader {
         PrettierExplosions.get().executeOnCreepers = PrettierExplosions.get().getConfig().getBoolean("prettify.creeper-explosions");
         PrettierExplosions.get().executeOnOther = PrettierExplosions.get().getConfig().getBoolean("prettify.other-explosions");
 
-        PrettierExplosions.get().visualCap = PrettierExplosions.get().getConfig().getInt("visual-cap-in-blocks");
-
         PrettierExplosions.get().extraVisuals = PrettierExplosions.get().getConfig().getBoolean("extra-visuals");
+
+        PrettierExplosions.get().realisticTrajectories = PrettierExplosions.get().getConfig().getBoolean("realistic-trajectories");
+
+        PrettierExplosions.get().visualCap = PrettierExplosions.get().getConfig().getInt("visual-cap-in-blocks");
 
         PrettierExplosions.get().listType = ConfigListType.valueOf(PrettierExplosions.get().getConfig().getString("list-type").toUpperCase());
 

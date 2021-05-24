@@ -27,23 +27,27 @@ public class Visuals {
             FallingBlock fb = b.getWorld().spawnFallingBlock(b.getLocation().add(0.5, 0.5, 0.5), b.getBlockData());
             fb.setDropItem(false);
 
-            // fling the blocks away from the explosion source point
-            double distance = fb.getLocation().distance(sourcePoint);
-            Vector velocity = fb.getLocation().clone().subtract(sourcePoint).toVector().normalize().divide(new Vector(distance, distance, distance)).multiply(1.5);
+            if(PrettierExplosions.get().realisticTrajectories) {
 
-            // always make sure the blocks get thrown into the air
-            if (velocity.getY() < 0) {
-                velocity.multiply(new Vector(1, -1.5, 1));
-            } else {
-                velocity.multiply(new Vector(1, 1.5, 1));
-            }
+                // fling the blocks away from the explosion source point
+                double distance = fb.getLocation().distance(sourcePoint);
+                Vector velocity = fb.getLocation().clone().subtract(sourcePoint).toVector().normalize().divide(new Vector(distance, distance, distance)).multiply(1.5);
 
-            // don't let the blocks fly *too* high
-            if (velocity.getY() > 2) velocity.setY(2);
+                // always make sure the blocks get thrown into the air
+                if (velocity.getY() < 0) {
+                    velocity.multiply(new Vector(1, -1.5, 1));
+                } else {
+                    velocity.multiply(new Vector(1, 1.5, 1));
+                }
 
-            // add a little bit of randomness
-            velocity.add(Vector.getRandom().multiply(0.05));
-            fb.setVelocity(velocity);
+                // don't let the blocks fly *too* high
+                if (velocity.getY() > 2) velocity.setY(2);
+
+                // add a little bit of randomness
+                velocity.add(Vector.getRandom().multiply(0.05));
+                fb.setVelocity(velocity);
+
+            } else { fb.setVelocity(new Vector((float) -1 + (float) (Math.random() * ((1 - -1) + 1)), (float) 0.5, (float) -0.3 + (float) (Math.random() * ((0.3 - -0.3) + 1)))); }
 
             // save it to flying blocks list so we can delete it when it lands instead of it placing as an actual block
             PrettierExplosions.get().flyingBlocks.add(fb);
