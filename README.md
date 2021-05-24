@@ -29,9 +29,11 @@ prettify:
   creeper-explosions: true
   other-explosions: true
 
-visual-cap-in-blocks: 185
-
 extra-visuals: true
+
+realistic-trajectories: true
+
+visual-cap-in-blocks: 185
 
 list-type: whitelist
 world-list:
