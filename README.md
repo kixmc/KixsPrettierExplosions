@@ -6,7 +6,7 @@ Lets face it; vanilla Minecraft explosions are anticlimactic and pretty lacklust
 [Showcase video of explosions](https://www.youtube.com/watch?v=rlUwBiCRnag)
 
 ## Compatibility
-* Spigot, Paper, & CraftBukkit on versions **1.8.x - 1.16.x** (other server types may work but are not directly supported)
+* Spigot, Paper, & CraftBukkit on versions **1.13.x - 1.16.x** (other server types may work but are not directly supported)
 * Java 8 or newer
 
 ## Features
