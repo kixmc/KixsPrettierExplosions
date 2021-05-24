@@ -25,7 +25,7 @@ public class EntityExplode implements Listener {
         if (PrettierExplosions.get().executeOnCreepers && e.getEntityType() == EntityType.CREEPER) shouldFly = true;
         if (PrettierExplosions.get().executeOnOther && e.getEntityType() != EntityType.PRIMED_TNT) shouldFly = true;
 
-        if (shouldFly) Visuals.createRealisticExplosion(e.blockList());
+        if (shouldFly) Visuals.createRealisticExplosion(e.getLocation(), e.blockList());
 
     }
 

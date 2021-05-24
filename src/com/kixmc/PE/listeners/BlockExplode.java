@@ -25,7 +25,7 @@ public class BlockExplode implements Listener {
         if (PrettierExplosions.get().executeOnBeds && isBed) shouldFly = true;
         if (PrettierExplosions.get().executeOnOther && !isBed) shouldFly = true;
 
-        if (shouldFly) Visuals.createRealisticExplosion(e.blockList());
+        if (shouldFly) Visuals.createRealisticExplosion(e.getBlock().getLocation(), e.blockList());
 
     }
 
