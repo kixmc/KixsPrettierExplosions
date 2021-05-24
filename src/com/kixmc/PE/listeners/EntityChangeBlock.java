@@ -17,7 +17,8 @@ public class EntityChangeBlock implements Listener {
     public void deleteFlyingBlocksOnLand(EntityChangeBlockEvent e) {
 
         if (!(e.getEntity() instanceof FallingBlock)) return;
-        if (!PrettierExplosions.get().flyingBlocks.contains((FallingBlock) e.getEntity())) return;
+        FallingBlock fb = (FallingBlock) e.getEntity();
+        if (!PrettierExplosions.get().flyingBlocks.contains(fb)) return;
 
         e.setCancelled(true);
 
@@ -25,7 +26,7 @@ public class EntityChangeBlock implements Listener {
 
         if (PrettierExplosions.get().extraVisuals) {
             // give the block landing particles so it doesn't just vanish into thin air
-            Visuals.createBlockLandEffect(e.getEntity().getLocation(), e.getBlock());
+            Visuals.createBlockLandEffect(fb);
         }
 
     }
