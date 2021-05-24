@@ -1,5 +1,5 @@
 # KixsPrettierExplosions
-Stunning realistic tnt &amp; explosion visuals. Respects fps, protection, and claiming plugins.
+Stunning realistic tnt &amp; explosion visuals. A visual overhaul to explosions with respect for fps, lag, and protection plugins.
 
 Lets face it; vanilla Minecraft explosions are anticlimactic and pretty lackluster. This plugin adds a pretty explosion visual to tnt, creepers, exploding beds, and more that launches the blocks away from the explosion and then smashes them to bits when the land. Drops remain the same and the explosions themselves are not modified
 
