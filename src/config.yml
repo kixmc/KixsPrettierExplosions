@@ -13,6 +13,7 @@ prettify:
   tnt-explosions: true
   bed-explosions: true
   creeper-explosions: true
+  windcharge-explosions: false
   other-explosions: true
 
 extra-visuals: true
