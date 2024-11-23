@@ -3,7 +3,7 @@ description: Stunning realistic tnt & explosion visuals. Respects fps, protectio
 author: kixmc
 version: 1.0.1
 main: com.kixmc.PE.core.PrettierExplosions
-api-version: 1.13
+api-version: 1.21
 commands:
   prettierexplosions:
     aliases: [pe]
