@@ -1,5 +1,6 @@
 package com.kixmc.PE.core;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Effect;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -51,6 +52,12 @@ public class Visuals {
 
             // save it to flying blocks list so we can delete it when it lands instead of it placing as an actual block
             PrettierExplosions.get().flyingBlocks.add(fb);
+            // we'll remove the entity regardless after 30 seconds, as it should always have landed by this point
+            // if it hasn't, it's probably frozen out of tick distance and would otherwise become untracked and land normally if not loaded before the server restarts
+            Bukkit.getScheduler().runTaskLater(PrettierExplosions.get(), () -> {
+                PrettierExplosions.get().flyingBlocks.remove(fb);
+                if(fb.isValid()) fb.remove();
+            }, 600L); // 30 sec
 
             PrettierExplosions.get().activeBlocksCount++;
         }
