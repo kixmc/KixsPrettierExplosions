@@ -6,7 +6,7 @@ Vanilla Minecraft explosions are anticlimactic and pretty lackluster. This plugi
 ![showcase gif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjIxYmM1N2EwMTM3YjZhZjQwMzU4ZDQyZmZlYTVlMzg5MjdjNzdjZSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/EkeFuFUnjW1OSmqENU/giphy.gif)
 
 ## Compatibility
-* Spigot, Paper, & CraftBukkit on versions **1.13.x - 1.19.x** (other server types may work but are not directly supported)
+* Spigot, Paper, & CraftBukkit on versions **1.13.x - 1.21.x** (other server types may work but are not directly supported)
 * Java 8 or newer
 
 ## Features
