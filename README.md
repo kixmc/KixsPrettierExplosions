@@ -1,12 +1,12 @@
 # KixsPrettierExplosions
 Stunning realistic tnt &amp; explosion visuals. A visual overhaul to explosions with respect for fps, lag, and protection plugins.
 
-Lets face it; vanilla Minecraft explosions are anticlimactic and pretty lackluster. This plugin adds a pretty explosion visual to tnt, creepers, exploding beds, and more that launches the blocks away from the explosion and then smashes them to bits when the land. Drops remain the same and the explosions themselves are not modified
+Vanilla Minecraft explosions are anticlimactic and pretty lackluster. This plugin overhauls visuals on tnt, creepers, exploding beds, and more. Blocks launch away from the explosion and then smash to bits when they land. Drops remain the same and the explosions themselves are not modified.
 
-[Showcase video of explosions](https://www.youtube.com/watch?v=rlUwBiCRnag)
+![showcase gif](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjIxYmM1N2EwMTM3YjZhZjQwMzU4ZDQyZmZlYTVlMzg5MjdjNzdjZSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/EkeFuFUnjW1OSmqENU/giphy.gif)
 
 ## Compatibility
-* Spigot, Paper, & CraftBukkit on versions **1.8.x - 1.16.x** (other server types may work but are not directly supported)
+* Spigot, Paper, & CraftBukkit on versions **1.13.x - 1.19.x** (other server types may work but are not directly supported)
 * Java 8 or newer
 
 ## Features
