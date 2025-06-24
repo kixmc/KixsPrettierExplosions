@@ -22,6 +22,7 @@ public class EntityChangeBlock implements Listener {
 
         e.setCancelled(true);
 
+        PrettierExplosions.get().flyingBlocks.remove(fb);
         PrettierExplosions.get().activeBlocksCount--;
 
         if (PrettierExplosions.get().extraVisuals) {
@@ -29,6 +30,8 @@ public class EntityChangeBlock implements Listener {
             Visuals.createBlockLandEffect(fb);
         }
 
+        // make sure it's removed
+        if(fb.isValid()) fb.remove();
     }
 
 }

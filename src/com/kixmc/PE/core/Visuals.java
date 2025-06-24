@@ -55,8 +55,11 @@ public class Visuals {
             // we'll remove the entity regardless after 30 seconds, as it should always have landed by this point
             // if it hasn't, it's probably frozen out of tick distance and would otherwise become untracked and land normally if not loaded before the server restarts
             Bukkit.getScheduler().runTaskLater(PrettierExplosions.get(), () -> {
-                PrettierExplosions.get().flyingBlocks.remove(fb);
-                if(fb.isValid()) fb.remove();
+                if (PrettierExplosions.get().flyingBlocks.contains(fb)) {
+                    PrettierExplosions.get().flyingBlocks.remove(fb);
+                    if(fb.isValid()) fb.remove();
+                    PrettierExplosions.get().activeBlocksCount = Math.max(0, PrettierExplosions.get().activeBlocksCount - 1);
+                }
             }, 600L); // 30 sec
 
             PrettierExplosions.get().activeBlocksCount++;
