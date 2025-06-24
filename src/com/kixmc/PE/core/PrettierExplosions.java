@@ -35,6 +35,7 @@ public class PrettierExplosions extends JavaPlugin implements Listener, CommandE
     public boolean executeOnBeds = false;
     public boolean executeOnCreepers = false;
     public boolean executeOnOther = false;
+    public boolean executeOnWindCharge = false;
 
     public boolean extraVisuals = true;
     public boolean realisticTrajectories = true;

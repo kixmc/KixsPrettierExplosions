@@ -10,6 +10,7 @@ public class ConfigVarLoader {
         PrettierExplosions.get().executeOnBeds = PrettierExplosions.get().getConfig().getBoolean("prettify.bed-explosions");
         PrettierExplosions.get().executeOnCreepers = PrettierExplosions.get().getConfig().getBoolean("prettify.creeper-explosions");
         PrettierExplosions.get().executeOnOther = PrettierExplosions.get().getConfig().getBoolean("prettify.other-explosions");
+        PrettierExplosions.get().executeOnWindCharge = PrettierExplosions.get().getConfig().getBoolean("prettify.windcharge-explosions");
 
         PrettierExplosions.get().extraVisuals = PrettierExplosions.get().getConfig().getBoolean("extra-visuals");
 

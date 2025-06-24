@@ -21,9 +21,21 @@ public class EntityExplode implements Listener {
 
         boolean shouldFly = false;
 
-        if (PrettierExplosions.get().executeOnTnt && e.getEntityType() == EntityType.PRIMED_TNT) shouldFly = true;
-        if (PrettierExplosions.get().executeOnCreepers && e.getEntityType() == EntityType.CREEPER) shouldFly = true;
-        if (PrettierExplosions.get().executeOnOther && e.getEntityType() != EntityType.PRIMED_TNT) shouldFly = true;
+        switch(e.getEntityType()) {
+            case TNT_MINECART:
+            case TNT:
+                shouldFly = PrettierExplosions.get().executeOnTnt;
+                break;
+            case CREEPER:
+                shouldFly = PrettierExplosions.get().executeOnCreepers;
+                break;
+            case WIND_CHARGE:
+                shouldFly = PrettierExplosions.get().executeOnWindCharge;
+                break;
+            default:
+                shouldFly = PrettierExplosions.get().executeOnOther;
+                break;
+        }
 
         if (shouldFly) Visuals.createRealisticExplosion(e.getLocation(), e.blockList());
 
